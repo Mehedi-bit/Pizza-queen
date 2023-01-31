@@ -95,6 +95,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+::selection {
+  background-color: #f88e74;
+  color: white;
+}
+
 a {
   color: inherit;
   text-decoration: none;

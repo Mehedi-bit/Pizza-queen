@@ -34,7 +34,7 @@ const Footer = () => {
           </p>
           <br />
           <p className={styles.text}>
-            78-E, Airport.
+            78-E, Shahjalal Airport.
             <br /> Dhaka, R. 23/N
             <br /> (683) 746-3014
           </p>
