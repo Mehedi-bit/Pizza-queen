@@ -10,7 +10,7 @@
 }
 
 .container:hover {
-  background-color: #fdefeb;
+  background-color: #ffe7e1;
 }
 
 .title {
@@ -28,4 +28,20 @@
 .desc {
   text-align: center;
   color: #777;
+}
+
+/* responsiveness */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .price,
+  .desc {
+    font-size: 24px;
+  }
 }
