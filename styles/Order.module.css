@@ -89,7 +89,9 @@
 }
 
 /* responsiveness */
-@media screen and (max-width: 480px) {
+
+/* mobile, iPad and tablet */
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
     padding: 20px;
@@ -142,5 +144,39 @@
   .wrapper {
     width: 100%;
     margin-bottom: 30px;
+  }
+}
+
+/* iPad and tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .row:last-child {
+    margin: 10%;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 60%;
   }
 }

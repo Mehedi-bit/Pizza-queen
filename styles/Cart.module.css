@@ -63,7 +63,7 @@
 }
 
 /* responsiveness */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
     padding: 20px;
@@ -123,5 +123,49 @@
   .wrapper {
     width: 100%;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    width: 80%;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 60%;
+  }
+
+  .button {
+    height: 40px;
   }
 }

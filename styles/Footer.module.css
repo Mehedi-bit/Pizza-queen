@@ -21,6 +21,10 @@
   padding: 0 20px;
 }
 
+.card:first-child .title {
+  display: none;
+}
+
 .title {
   font-size: 18px;
   color: #b7903c;
@@ -36,7 +40,9 @@
 }
 
 /* responsiveness */
-@media screen and (max-width: 480px) {
+
+/* mobile devices, iPads and tablets  */
+@media screen and (max-width: 768px) {
   .container {
     height: auto;
     text-align: center;
@@ -64,5 +70,20 @@
 
   .text {
     font-size: 20px;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    height: auto;
+  }
+
+  .item:first-child {
+    display: none;
+  }
+
+  .card:first-child .title {
+    display: block;
   }
 }

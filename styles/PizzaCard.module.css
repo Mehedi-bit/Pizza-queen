@@ -17,6 +17,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #d1411e;
+  text-align: center;
 }
 
 .price {
@@ -43,5 +44,22 @@
   .price,
   .desc {
     font-size: 24px;
+  }
+}
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 33%;
   }
 }

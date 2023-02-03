@@ -83,6 +83,8 @@
 }
 
 /* set responsiveness */
+
+/* mobile devices */
 @media screen and (max-width: 480px) {
   .item:nth-child(2) {
     display: none;
@@ -90,5 +92,33 @@
 
   .item:nth-child(1) {
     flex: 3;
+  }
+}
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .item:nth-child(2) {
+    display: none;
+  }
+
+  .item:nth-child(1) {
+    flex: 3;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .item:first-child {
+    display: none;
+  }
+
+  .listItem {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1188px) {
+  .item:first-child {
+    display: none;
   }
 }

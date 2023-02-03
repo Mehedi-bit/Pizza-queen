@@ -6,6 +6,26 @@
   background-color: #fff;
 }
 
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  padding-bottom: 5px;
+}
+
+.title:after {
+  width: 100px;
+  height: 2px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #d1411e;
+}
+
 .desc {
   width: 70%;
   font-size: 24px;
@@ -22,13 +42,40 @@
 }
 
 /* responsiveness */
+
+/* mobile screen */
 @media screen and (max-width: 480px) {
+  .title {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .desc {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/* iPads and Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .title {
     text-align: center;
   }
 
   .desc {
     width: 90%;
+    text-align: center;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    text-align: center;
+  }
+
+  .desc {
+    width: 80%;
     text-align: center;
   }
 }
