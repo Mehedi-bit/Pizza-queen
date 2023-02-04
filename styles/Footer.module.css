@@ -21,10 +21,6 @@
   padding: 0 20px;
 }
 
-.card:first-child .title {
-  display: none;
-}
-
 .title {
   font-size: 18px;
   color: #b7903c;
@@ -81,9 +77,5 @@
 
   .item:first-child {
     display: none;
-  }
-
-  .card:first-child .title {
-    display: block;
   }
 }
