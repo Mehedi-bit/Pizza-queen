@@ -3,12 +3,15 @@ import styles from "@/styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import { Cagliostro } from "@next/font/google";
+import { useDispatch } from "react-redux";
+import { addProduct } from "@/redux/cartSlice";
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
   const [extras, setExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -30,6 +33,10 @@ const Product = ({ pizza }) => {
       changePrice(-option.price);
       setExtras(extras.filter((extra) => extra._id !== option._id));
     }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extras, price, quantity }));
   };
 
   return (
@@ -80,7 +87,9 @@ const Product = ({ pizza }) => {
             className={styles.quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
-          <button className={styles.button}>ADD TO CART</button>
+          <button className={styles.button} onClick={handleClick}>
+            ADD TO CART
+          </button>
         </div>
       </div>
     </div>
