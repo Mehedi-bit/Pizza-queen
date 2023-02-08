@@ -1,7 +1,7 @@
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: #bcb9b995;
+  background-color: rgba(245, 240, 240, 0.52);
   position: absolute;
   top: 0;
   left: 0;
