@@ -3,7 +3,9 @@ import Product from '../../../models/Product.model'
 
 
 export default async function handler(req, res) {
-    const { method } = req;
+    const { method, cookies } = req;
+
+    const token = cookies.token;
 
     await dbConnect();
 
@@ -17,9 +19,12 @@ export default async function handler(req, res) {
     }
 
     if (method === 'POST') {
+        if (!token || token !== process.env.TOKEN) {
+            return res.status(401).json("Not authenticated!");
+        }
         try {
             const product = Product.create(req.body);
-            res.status(201).json("Pizza created");
+            res.status(201).json(product);
         }catch(err) {
             res.status(500).json(err);
         }
