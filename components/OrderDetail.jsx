@@ -1,7 +1,7 @@
 import styles from "@/styles/OrderDetail.module.css";
 import { useState } from "react";
 
-const OrderDetail = ({ total, createOrder }) => {
+const OrderDetail = ({ total, createOrder, setOpenModal }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -18,6 +18,9 @@ const OrderDetail = ({ total, createOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <span onClick={() => setOpenModal(false)} className={styles.close}>
+          X
+        </span>
         <h1 className={styles.title}>You will pay ${total} after delivery.</h1>
         <div className={styles.item}>
           <label className={styles.label}>Name or surname</label>
